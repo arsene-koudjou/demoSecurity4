@@ -3,8 +3,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+@Data
 @Entity
 public class Product {
 
