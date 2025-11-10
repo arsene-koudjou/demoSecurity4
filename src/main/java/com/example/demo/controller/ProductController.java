@@ -1,29 +1,25 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.Product;
-import com.example.demo.repository.ProductRepository;
+import com.example.demo.services.ProductService;
+import com.example.demo.dtos.ProductDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/products")
 public class ProductController {
 
-    private final ProductRepository productRepository;
+    private final ProductService productService;
 
-    public ProductController(ProductRepository productRepository){
-        this.productRepository = productRepository;
+    public ProductController(ProductService productService){
+        this.productService = productService;
     }
 
     @GetMapping
-    public List<Product> getProducts(){
-        return new ArrayList<>( this.productRepository.findAll().stream().collect(
-                Collectors.toMap(Product::getName, Function.identity(), (p1,p2) -> p1)).values());
+    public List<ProductDto> getProducts(){
+        return  this.productService.getAllProducts();
     }
 }
