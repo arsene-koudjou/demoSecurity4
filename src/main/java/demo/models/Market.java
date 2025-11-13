@@ -1,6 +1,5 @@
-package com.example.demo.models;
-
-import com.example.demo.enums.CountryCode;
+package demo.models;
+import demo.enums.CountryCode;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

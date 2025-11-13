@@ -1,11 +1,10 @@
-package com.example.demo.initializer;
+package demo.initializer;
 
-import com.example.demo.enums.CountryCode;
-import com.example.demo.models.Category;
-import com.example.demo.models.Market;
-import com.example.demo.models.Product;
-import com.example.demo.repository.ProductRepository;
-import lombok.extern.slf4j.Slf4j;
+import demo.enums.CountryCode;
+import demo.models.Category;
+import demo.models.Market;
+import demo.models.Product;
+import demo.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

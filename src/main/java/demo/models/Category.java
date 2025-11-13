@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package demo.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -9,6 +9,7 @@ import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Category {
 
     @Id
@@ -17,8 +18,6 @@ public class Category {
     private String name;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> productList = new ArrayList<>();
-
-    public Category(){}
     public Category (String name){
         this.name = name;
     }

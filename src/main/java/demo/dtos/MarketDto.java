@@ -1,7 +1,7 @@
-package com.example.demo.dtos;
+package demo.dtos;
 
-import com.example.demo.enums.CountryCode;
-import com.example.demo.models.Market;
+import demo.enums.CountryCode;
+import demo.models.Market;
 
 import java.util.Set;
 

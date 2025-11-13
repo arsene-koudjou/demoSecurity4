@@ -1,4 +1,4 @@
-package com.example.demo.enums;
+package demo.enums;
 
 public enum CountryCode {
     FRANCE("France", "FR", "EUR"),

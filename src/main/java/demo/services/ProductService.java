@@ -1,8 +1,7 @@
-package com.example.demo.services;
+package demo.services;
 
-import com.example.demo.dtos.ProductDto;
-import com.example.demo.models.Product;
-import com.example.demo.repository.ProductRepository;
+import demo.dtos.ProductDto;
+import demo.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +20,7 @@ public class ProductService {
     public List<ProductDto> getAllProducts(){
         return  this.productRepository.findAll().stream()
                 .collect(
-                        Collectors.toMap(Product::getName, Function.identity(), (p1, p2) -> p1)).values()
+                        Collectors.toMap(product -> product.getName(), Function.identity(), (p1, p2) -> p1)).values()
                 .stream().map(ProductDto::fromProductEntity).toList();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package demo.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Builder
+@NoArgsConstructor
 public class Product {
 
     @Id
@@ -34,11 +35,5 @@ public class Product {
         this.stock = stock;
         this.category = category;
         this.market = market;
-    }
-
-    public Product(){}
-
-    public String getName() {
-        return name;
     }
 }

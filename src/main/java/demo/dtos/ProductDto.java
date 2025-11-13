@@ -1,6 +1,6 @@
-package com.example.demo.dtos;
+package demo.dtos;
 
-import com.example.demo.models.Product;
+import demo.models.Product;
 
 public record ProductDto(Long id, String name, double price, int stock) {
     public static ProductDto fromProductEntity(Product product){
